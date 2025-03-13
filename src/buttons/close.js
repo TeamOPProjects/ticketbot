@@ -35,7 +35,7 @@ module.exports = class CloseButton extends Button {
 					],
 					ephemeral: true,
 				});
-			} else if (id.expect === 'user' && interaction.user.id !== ticket.createdById) {
+			} else if (id.expect === 'user' && interaction.user.id !== ticket.createdById && !staff) {
 				return await interaction.reply({
 					embeds: [
 						new ExtendedEmbedBuilder()
