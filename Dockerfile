@@ -30,6 +30,6 @@ COPY --from=builder --chown=container:container --chmod=777 /build /app
 ENTRYPOINT [ "/app/scripts/start.sh" ]
 HEALTHCHECK --interval=15s --timeout=5s --start-period=60s \
 	CMD curl -f http://localhost:${HTTP_PORT}/status || exit 1
-LABEL org.opencontainers.image.source=https://github.com/discord-tickets/bot \
+LABEL org.opencontainers.image.source=https://github.com/TeamOPProjects/ticketbot \
 	org.opencontainers.image.description="The most popular open-source ticket bot for Discord." \
 	org.opencontainers.image.licenses="GPL-3.0-or-later"
